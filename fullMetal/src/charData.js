@@ -90,3 +90,5 @@ export const charData = [
   },
 ];
 
+export const navTitles = ['About us', 'Info', "Suport us"]
+

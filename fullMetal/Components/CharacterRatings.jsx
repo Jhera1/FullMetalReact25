@@ -1,5 +1,6 @@
 // CharacterRatings.jsx
 import React from "react";
+import '../CSS/CharacterRatings.css'
 
 export function CharacterRatings({ characters }) {
   const topFive = [...characters]
@@ -10,14 +11,14 @@ export function CharacterRatings({ characters }) {
     <section id="character-ratings">
       <h4>Top Characters</h4>
       <table>
-        
+        <thead>
           <tr>
             <th>Name</th>
             <th>Skillset</th>
             <th>Votes</th>
           </tr>
-        
-       
+        </thead>
+        <tbody>
           {topFive.map((char, i) => (
             <tr key={char.name} className={i % 2 === 0 ? "dark" : "light"}>
               <td>
@@ -28,7 +29,7 @@ export function CharacterRatings({ characters }) {
               <td>{char.votes}</td>
             </tr>
           ))}
-       
+        </tbody>
       </table>
     </section>
   );
